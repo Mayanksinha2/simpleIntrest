@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating Simple Intrest</title>
+    <script>
+        var f;
+        var p, n, r, Simpleint, amount;
+        function findSI(f) {
+            p = parseFloat(f.principal.value);
+            n = parseFloat(f.years.value);
+            r = parseFloat(f.rateint.value);
+            Simpleint = (p * n * r) / 100;
+            amount = parseFloat(p) + parseFloat(Simpleint);
+            f.si.value = Simpleint;
+            f.amt.value = amount;
+        }
+    </script>
+</head>
+
+<body bgcolor="thistle">
+    <form>
+        <br>
+        <hr>
+        <h2><b><i>
+                    <marquee direction="right">Simple Intrest</marquee>
+                </i></b></h2>
+        <pre>
+            <center>
+                <br><hr><br>
+                Enter the principal amount (in Rupees):   <input type="text" name="principal">
+                <br>
+                Enter the number of Years:                <input type="text" name="years"><br>
+                Enter the Rate of Intrest:                <input type="text" name="rateint"><br>
+                 <input type="button" value="Simple Intrest"onclick="findSI(this.form)"><br><br>
+                Simple Intrest                            <input type="text" name="si">
+                Total Amount(Principal+Simple Intrest)    <input type="text" name="amt">
+                <br><br><hr><br><br>
+            </center>
+        </pre>
+    </form>
+
+</body>
+
+</html>
